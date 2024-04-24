@@ -8,43 +8,12 @@ const Index = () => {
     const [error, setError] = useState('');
 
     // Function to handle form submission
-    // const handleSubmit = async (event) => {
-    //     event.preventDefault();
+    const handleSubmit = (event) => {
+        event.preventDefault();
 
-    //     // Here you would typically send the user input (userId and password) to your backend server for authentication
-    //     // For this example, let's assume we have a function called login in our backend API
-
-    //     try {
-    //         // Make a fetch request to your backend server
-    //         const response = await fetch('/api/login', {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             },
-    //             body: JSON.stringify({ userId, password })
-    //         });
-
-    //         // Assuming your backend returns a JSON response with a success property
-    //         const data = await response.json();
-
-    //         if (data.success) {
-    //             // If login is successful, you can redirect the user to another page
-    //             window.location.href = '/dashboard';
-    //         } else {
-    //             // If login fails, display an error message
-    //             setError('Invalid credentials. Please try again.');
-    //         }
-    //     } catch (error) {
-    //         console.error('Error:', error);
-    //         setError('An error occurred. Please try again later.');
-    //     }
-    // };
-
-    const handleSubmit = () => {
-
-        Router.push('center/status')
-
-    }
+        // Redirect using Router.push
+        Router.push('/center/status');
+    };
 
     return (
         <div className='flex w-full bg-blue-50 justify-center items-center h-screen'>
@@ -74,7 +43,7 @@ const Index = () => {
                             required
                         />
                     </div>
-                    <button type="submit" onClick={handleSubmit} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</button>
+                    <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</button>
                 </form>
             </div>
         </div>
