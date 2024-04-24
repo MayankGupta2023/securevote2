@@ -6,7 +6,7 @@ import Router from 'next/router'
 
 export default function Home() {
   return (
-    <div className="h-screen bg-blue-50 pt-20">
+    <div className="h-screen bg-blue-50 pt-20 pb-0">
 
       <div className="flex justify-center items-center pt-4 ">
 
